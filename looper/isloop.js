@@ -2,6 +2,18 @@
 
 //Complete this algo
 const isLoop = (linkedlist) => {
+    let pointer = linkedlist.head
+    let obj = {}
+    while (pointer.next !== null){
+        if (obj.hasOwnProperty(pointer.value)){
+            return true
+        }
+        else {
+            obj[pointer.value]=pointer.value;
+            pointer = pointer.next
+        }
+    }
+    return false
 
 };
 
